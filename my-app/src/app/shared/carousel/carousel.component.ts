@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit {
+export class MyCarouselComponent implements OnInit {
 
   constructor() { }
   noPause: boolean;

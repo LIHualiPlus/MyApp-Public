@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CarouselModule} from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SummaryComponent } from './shared/summary/summary.component';
 import { HomeComponent } from './home/home/home.component';
-import { CarouselComponent } from './shared/carousel/carousel.component';
+import { MyCarouselComponent } from './shared/carousel/carousel.component';
 
 
 @NgModule({
@@ -14,11 +14,12 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
     AppComponent,
     SummaryComponent,
     HomeComponent,
-    CarouselComponent
+    MyCarouselComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
