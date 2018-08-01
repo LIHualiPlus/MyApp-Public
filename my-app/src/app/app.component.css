@@ -9,6 +9,7 @@ li{
    text-align: center;
    font-size: 20px;
    border: 0;
+   border-radius: 4px;
 }
 li:hover{
     background-color: darkorange;
@@ -17,5 +18,8 @@ li:hover{
 
     background-color: rgb(155, 160, 160)
 
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
 }
  
