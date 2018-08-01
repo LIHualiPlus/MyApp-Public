@@ -1,0 +1,20 @@
+
+ul{
+    margin:0 20px 0 20px;
+    text-align: center;
+    border: 0;
+}
+li{
+   padding:0 20px 0 20px;
+   text-align: center;
+   font-size: 20px;
+   border: 0;
+}
+li:hover{
+    background-color: darkorange;
+}
+.body{
+
+    background-color: rgb(155, 160, 160)
+
+}
