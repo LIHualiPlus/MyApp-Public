@@ -1,9 +1,4 @@
-.row{
-
-    margin: -10px -15px 0px -15px;
-
-}
-.summary{
+.notice{
 
     display: block;
     padding: 4px;
@@ -12,4 +7,6 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
+     
+    margin-left: -15px;
 }

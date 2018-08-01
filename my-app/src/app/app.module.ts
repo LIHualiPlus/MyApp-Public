@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SummaryComponent } from './shared/summary/summary.component';
 import { HomeComponent } from './home/home/home.component';
 import { MyCarouselComponent } from './shared/carousel/carousel.component';
+import { NoticeComponent } from './shared/notice/notice.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MyCarouselComponent } from './shared/carousel/carousel.component';
     SummaryComponent,
     HomeComponent,
     MyCarouselComponent,
+    NoticeComponent,
   ],
   imports: [
     BrowserModule,
