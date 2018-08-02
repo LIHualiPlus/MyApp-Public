@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from '../../app.service';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  @Input() data: any;
+  constructor(private appservice: AppService) {
+
+   }
 
   ngOnInit() {
   }
-
 }
