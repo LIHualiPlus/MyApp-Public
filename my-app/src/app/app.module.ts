@@ -8,6 +8,7 @@ import { SummaryComponent } from './shared/summary/summary.component';
 import { HomeComponent } from './home/home/home.component';
 import { MyCarouselComponent } from './shared/carousel/carousel.component';
 import { NoticeComponent } from './shared/notice/notice.component';
+import { HotsummaryComponent } from './shared/hotsummary/hotsummary.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { NoticeComponent } from './shared/notice/notice.component';
     HomeComponent,
     MyCarouselComponent,
     NoticeComponent,
+    HotsummaryComponent,
   ],
   imports: [
     BrowserModule,
