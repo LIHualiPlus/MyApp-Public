@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
+import { AddArticleComponent } from './add-article/add-article.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'lifes', component: LifeshowComponent  }
+  {path: 'lifes', component: LifeshowComponent  },
+  {path: 'addarticle', component: AddArticleComponent }
 ];
 @NgModule({
   imports: [

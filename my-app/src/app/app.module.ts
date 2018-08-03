@@ -14,7 +14,7 @@ import { AppService } from './app.service';
 import { DetailComponent } from './shared/detail/detail.component';
 import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
 import { AddArticleComponent } from './add-article/add-article.component';
-
+import { QuillModule } from '../../node_modules/ngx-quill';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { AddArticleComponent } from './add-article/add-article.component';
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
+    QuillModule,
     HttpClientModule
   ],
   providers: [AppService],

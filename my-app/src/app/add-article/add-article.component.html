@@ -1,1 +1,75 @@
- 
+<br>
+
+<quill-editor [modules]="config" [style]="{height: '200px'}" placeholder=" ">
+    <div quill-editor-toolbar>
+        <span class="ql-formats">
+            <button type="button" class="ql-header" value="1"></button>
+            <button type="button" class="ql-header" value="2"></button>
+            <button type="button" class="ql-blockquote"></button>
+            <button type="button" class="ql-code-block ql-active"></button>
+            <button type="button" class="ql-list" value="ordered"></button>
+            <button type="button" class="ql-script" value="sub"></button>
+            <button type="button" class="ql-script" value="super"></button>
+            <!-- <button type="button" class="ql-indent" value="-1"></button>
+            <button type="button" class="ql-indent" value="+1"></button> -->
+    
+
+
+        </span>
+        <span class="ql-formats">
+            <select class="ql-size">
+                <option value=1></option>
+                <option value=false></option>
+                <option value="large"></option>
+                <option value="huge"></option>
+            </select>
+            <select class="ql-header">
+                    <option value=1></option>
+                    
+                    <option value=2></option>
+                    <option value=3></option>
+                    <option value=4></option>
+                    <option value=5></option>
+                    <option value=6></option>
+                    <option value=20></option>
+                </select>
+            <select class="ql-color">
+                <option value="red"></option>
+                <option selected></option>
+                <option value="black"></option>
+                <option value="blue"></option>
+            </select>
+            <select class="ql-background">
+                <option value="red"></option>
+                <option selected></option>
+                <option value="black"></option>
+                <option value="blue"></option>
+            </select>
+            <select class="ql-font">
+            </select>
+            <select class="ql-align">
+            </select>
+        
+             
+            <!-- <button type="button" class="ql-color" ></button> 
+        <button type="button" class="ql-background"  ></button> 
+        <button type="button" class="ql-font" value="" ></button> 
+        <button type="button" class="ql-align" value="" ></button> 
+        <button type="button" class="ql-clean" ></button>  -->
+
+        </span>
+        
+      <span class="ql-formats">
+          <button type="button" class="ql-link"></button>
+          <button type="button" style="outline:none">
+            <div class="upload_img">
+                <svg class="camera" viewBox="0 0 18 18"> <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect> <circle class="ql-fill" cx="6" cy="7" r="1"></circle> <polyline class="ql-even ql-fill" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline> </svg>
+                <input type="file" class="file_input" ng2FileSelect   />
+            </div>
+        </button>
+      </span>
+      <span class="ql-formats">
+          <p style="font-size: 9px;" *ngIf="uploader2?.queue.length > 0">图片已上传：{{ uploader2?.queue.length > 0 ? uploader2?.queue[uploader2?.queue.length-1]?.progress : 0 }}%</p>
+      </span>
+    </div>
+</quill-editor>
