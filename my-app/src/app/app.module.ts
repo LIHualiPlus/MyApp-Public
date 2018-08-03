@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule} from 'ngx-bootstrap';
+import { CommonModule } from '@angular/common';
+import { FileUploadModule} from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +36,9 @@ import { QuillModule } from '../../node_modules/ngx-quill';
     AppRoutingModule,
     CarouselModule.forRoot(),
     QuillModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    FileUploadModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
