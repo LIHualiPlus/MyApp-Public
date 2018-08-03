@@ -13,6 +13,7 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { AppService } from './app.service';
 import { DetailComponent } from './shared/detail/detail.component';
 import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
+import { AddArticleComponent } from './add-article/add-article.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
     NoticeComponent,
     HotsummaryComponent,
     DetailComponent,
-    LifeshowComponent
+    LifeshowComponent,
+    AddArticleComponent
 
   ],
   imports: [

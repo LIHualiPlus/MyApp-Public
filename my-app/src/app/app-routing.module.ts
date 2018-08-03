@@ -8,7 +8,7 @@ import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'lifes', component: LifeshowComponent}
+  {path: 'lifes', component: LifeshowComponent  }
 ];
 @NgModule({
   imports: [

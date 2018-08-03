@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  // rout() {
+  //   this.router.navigate(['home']);
+  // }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLinkActive, ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-lifeshow',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lifeshow.component.css']
 })
 export class LifeshowComponent implements OnInit {
-
-  constructor() { }
+ data: any;
+  constructor( private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.data = this.activatedRoute.snapshot.queryParams;
+    console.log(this.data);
+    console.log(this.activatedRoute);
   }
 
 }
