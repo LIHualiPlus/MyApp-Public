@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FileUploader } from '../../../node_modules/ng2-file-upload';
 import { QuillModule } from '../../../node_modules/ngx-quill';
 import { TranslationWidth } from '../../../node_modules/@angular/common';

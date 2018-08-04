@@ -1,6 +1,17 @@
-<br>
+ 
 
-<quill-editor   [style]="{height: '200px'}" placeholder=" "   (onContentChanged)="onContentChanged($event)"  >
+<div class="container">
+    <div class="row">
+  
+      <div class="col-md-12">
+        <app-notice></app-notice>
+      </div>
+    </div>
+    <div class="row">
+  
+      <div class="col-md-8">
+  
+<quill-editor   [style]="{height: '800px'}" placeholder=" "   (onContentChanged)="onContentChanged($event)"  >
     <div quill-editor-toolbar>
         <span class="ql-formats">
             <button type="button" class="ql-header" value="1"></button>
@@ -68,5 +79,32 @@
       </span> -->
     </div>
 </quill-editor>
-
-<button (click)="save()">保存</button>
+ 
+  
+   
+  
+      </div>
+  
+  
+      <div class="col-md-4">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">题目</label>
+ 
+              <input type="text" class="form-control" name="exampleInputEmail1" [(ngModel)]="article.AritcleName" placeholder="题目">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">简介</label>
+              <input type="text" class="form-control" id="exampleInputPassword1"   placeholder="Password">
+            </div>
+            <div class="form-group">
+               <option>
+                   <select></select>
+               </option>
+              </div>
+             
+            <button type="submit" (click)="save()" class="btn btn-default">保存</button>
+          </form>
+      </div>
+    </div>
+  </div>

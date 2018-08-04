@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CarouselModule} from 'ngx-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FileUploadModule} from 'ng2-file-upload';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SummaryComponent } from './shared/summary/summary.component';
@@ -38,7 +38,9 @@ import { QuillModule } from '../../node_modules/ngx-quill';
     QuillModule,
     HttpClientModule,
     CommonModule,
-    FileUploadModule
+    FileUploadModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
