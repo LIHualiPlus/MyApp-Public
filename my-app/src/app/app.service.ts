@@ -11,16 +11,16 @@ const httpOptions = {
 
 @Injectable()
 export class AppService {
-  private url = 'http://localhost:56691/api';
+
   constructor(
     private http: HttpClient,
   ) { }
 
 
   getArticalList(): Observable<any> {
-     return this.http.get(this.url + '/Artical/getArticalList');
+     return this.http.get( 'api/Artical/getArticalList');
   }
   addArtical(article: any): Observable<any> {
-    return this.http.post(this.url + '/Artical/addArtical', article , httpOptions);
+    return this.http.post( 'api/Artical/addArtical', article);
  }
 }
