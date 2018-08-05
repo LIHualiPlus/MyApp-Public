@@ -95,12 +95,15 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">简介</label>
-              <input type="text" class="form-control" id="exampleInputPassword1"   placeholder="Password">
+              <input type="text" class="form-control" id="exampleInputPassword1"   placeholder="简介">
             </div>
             <div class="form-group">
-               <option>
-                   <select></select>
-               </option>
+                <label for="exampleInputPassword1">分类</label>
+                <select name="type" class="form-control" [(ngModel)]="article.Type">
+                    <option value="">全部</option>
+                    <option value="1">技术</option>
+                    <option value="2">生活</option>
+                  </select>
               </div>
              
             <button type="submit" (click)="save()" class="btn btn-default">保存</button>
