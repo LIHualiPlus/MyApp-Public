@@ -6,11 +6,16 @@
     </div>
   </div>
   <div class="row">
-
+     {{data.Text}}
     <div class="col-md-8">
+      <div *ngIf="data.Text==undefined">
+        <div class="row" *ngFor="let item of ArticleList">
+          <app-summary [data]="item"></app-summary>
 
-        <app-detail [data]="data"></app-detail>
- 
+        </div>
+      </div>
+      <app-detail [data]="data"></app-detail>
+
 
     </div>
 

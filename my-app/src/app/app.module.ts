@@ -17,6 +17,7 @@ import { DetailComponent } from './shared/detail/detail.component';
 import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { QuillModule } from '../../node_modules/ngx-quill';
+import { TechnologyComponent } from './technology/technology/technology.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QuillModule } from '../../node_modules/ngx-quill';
     HotsummaryComponent,
     DetailComponent,
     LifeshowComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    TechnologyComponent
 
   ],
   imports: [

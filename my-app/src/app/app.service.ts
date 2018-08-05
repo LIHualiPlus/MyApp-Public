@@ -20,6 +20,9 @@ export class AppService {
   getArticalList(): Observable<any> {
      return this.http.get( 'api/Artical/getArticalList');
   }
+  getArticalListByType(type :any): Observable<any> {
+    return this.http.get( `api/Artical/GetArticalListByType/?type=${type}`);
+ }
   addArtical(article: any): Observable<any> {
     return this.http.post( 'api/Artical/addArtical', article);
  }
