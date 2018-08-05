@@ -1,16 +1,31 @@
 <div class="row">
   <div class="col-md-12">
-    <div class="summary" >
-       
-      <div class="caption">
-        <h3>
-          <a [routerLink]="['/lifes']" [queryParams]="data" target="_parent" title="题目"  >{{data.AritcleName}}
-            <br>
-            <small>简介</small>
-          </a>
-        </h3>
-        <div [innerHTML] ="data.Text">
+    <div class="summary" style="height: 140px;">
+
+
+      <div class="row">
+        <div class="col-md-3">
+            <img src="https://cuiqingcai.com/wp-content/themes/Yusi/timthumb.php?src=https://qiniu.cuiqingcai.com/wp-content/uploads/2018/07/203fb80e7bec54e7c14b5080b3389b504ec26a8d-e1530851353160.jpg&h=123&w=200&q=90&zc=1&ct=1" class="img-responsive img-rounded" alt=" Responsive image" style="margin-top: 20px;" >
+        </div>
+        <div class="col-md-9">
+          <h3>
+            <a [routerLink]="['/lifes']" [queryParams]="data" target="_parent" title="题目">{{data.AritcleName}}
+              <br>
+              <small>简介</small>
+              <br> <small>简介</small>
+            </a>
+          </h3>
+          <!-- <div [innerHTML]="data.Text"></div> -->
+
+
+          <span class="glyphicon glyphicon-user" aria-hidden="true">李华林</span>
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true">{{data.WriteTime | date:"yyyy-MM-dd"}}</span>
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true">浏览</span>
+          <span class="glyphicon glyphicon-comment" aria-hidden="true">评论</span>
+          <span class="glyphicon glyphicon-heart" aria-hidden="true">喜欢</span>
+        </div>
+
       </div>
+
     </div>
   </div>
-</div>    

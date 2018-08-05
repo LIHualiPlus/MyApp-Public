@@ -2,4 +2,4 @@
     "/api":{
       "target":"http://localhost:56691/"
     }
-  }
+}
