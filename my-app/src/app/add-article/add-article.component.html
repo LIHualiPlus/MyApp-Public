@@ -1,71 +1,69 @@
- 
-
 <div class="container">
     <div class="row">
-  
-      <div class="col-md-12">
-        <app-notice></app-notice>
-      </div>
+
+        <div class="col-md-12">
+            <app-notice></app-notice>
+        </div>
     </div>
     <div class="row">
-  
-      <div class="col-md-8">
-  
-<quill-editor   [style]="{height: '800px'}" placeholder=" "   (onContentChanged)="onContentChanged($event)"  >
-    <div quill-editor-toolbar>
-        <span class="ql-formats">
-            <button type="button" class="ql-header" value="1"></button>
-            <button type="button" class="ql-header" value="2"></button>
-            <button type="button" class="ql-blockquote"></button>
-            <button type="button" class="ql-code-block ql-active"></button>
-            <button type="button" class="ql-list" value="ordered"></button>
-            <button type="button" class="ql-script" value="sub"></button>
-            <button type="button" class="ql-script" value="super"></button>
-            <!-- <button type="button" class="ql-indent" value="-1"></button>
+
+        <div class="col-md-8">
+
+            <quill-editor [style]="{height: '800px'}" placeholder=" " (onContentChanged)="onContentChanged($event)">
+                <div quill-editor-toolbar>
+                    <span class="ql-formats">
+                        <button type="button" class="ql-header" value="1"></button>
+                        <button type="button" class="ql-header" value="2"></button>
+                        <button type="button" class="ql-blockquote"></button>
+                        <button type="button" class="ql-code-block ql-active"></button>
+                        <button type="button" class="ql-list" value="ordered"></button>
+                        <button type="button" class="ql-script" value="sub"></button>
+                        <button type="button" class="ql-script" value="super"></button>
+                        <!-- <button type="button" class="ql-indent" value="-1"></button>
             <button type="button" class="ql-indent" value="+1"></button> -->
-    
 
 
-        </span>
-        <span class="ql-formats">
-            <select class="ql-size">
-                <option value=1></option>
-                <option value=false></option>
-                <option value="large"></option>
-                <option value="huge"></option>
-            </select>
-            <select class="ql-header">
-                    <option value=1></option>
-                    
-                    <option value=2></option>
-                    <option value=3></option>
-                    <option value=4></option>
-                    <option value=5></option>
-                    <option value=6></option>
-                    <option value=20></option>
-                </select>
-            <select class="ql-color">
-                <option value="red"></option>
-                <option selected></option>
-                <option value="black"></option>
-                <option value="blue"></option>
-            </select>
-            <select class="ql-background">
-                <option value="red"></option>
-                <option selected></option>
-                <option value="black"></option>
-                <option value="blue"></option>
-            </select>
-            <select class="ql-font">
-            </select>
-            <select class="ql-align">
-            </select>  
-            <button type="button" class="ql-link"  ></button>
-            <button type="button" class="ql-image"  ></button>
-            <button type="button" class="ql-video"  ></button>
-        </span>
-        
-      <!-- <span class="ql-formats">
+
+                    </span>
+                    <span class="ql-formats">
+                        <select class="ql-size">
+                            <option value=1></option>
+                            <option value=false></option>
+                            <option value="large"></option>
+                            <option value="huge"></option>
+                        </select>
+                        <select class="ql-header">
+                            <option value=1></option>
+
+                            <option value=2></option>
+                            <option value=3></option>
+                            <option value=4></option>
+                            <option value=5></option>
+                            <option value=6></option>
+                            <option value=20></option>
+                        </select>
+                        <select class="ql-color">
+                            <option value="red"></option>
+                            <option selected></option>
+                            <option value="black"></option>
+                            <option value="blue"></option>
+                        </select>
+                        <select class="ql-background">
+                            <option value="red"></option>
+                            <option selected></option>
+                            <option value="black"></option>
+                            <option value="blue"></option>
+                        </select>
+                        <select class="ql-font">
+                        </select>
+                        <select class="ql-align">
+                        </select>
+                        <button type="button" class="ql-link"></button>
+                        <button type="button" class="ql-image"></button>
+                        <button type="button" class="ql-video"></button>
+                    </span>
+
+                    <!-- <span class="ql-formats">
           <button type="button" class="ql-link"></button>
           <button type="button" style="outline:none">
             <div class="upload_img">
@@ -77,37 +75,37 @@
       <span class="ql-formats">
           <p style="font-size: 9px;" *ngIf="uploader2?.queue.length > 0">图片已上传：{{ uploader2?.queue.length > 0 ? uploader2?.queue[uploader2?.queue.length-1]?.progress : 0 }}%</p>
       </span> -->
+                </div>
+            </quill-editor>
+
+
+
+
+        </div>
+
+
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">题目</label>
+
+                    <input type="text" class="form-control" name="exampleInputEmail1" [(ngModel)]="article.AritcleName" placeholder="题目">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">简介</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="简介">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">分类</label>
+                    <select name="type" class="form-control" [(ngModel)]="article.Type">
+                        <option value="">全部</option>
+                        <option value="1">技术</option>
+                        <option value="2">生活</option>
+                    </select>
+                </div>
+
+                <button type="submit" (click)="save()" class="btn btn-default">保存</button>
+            </form>
+        </div>
     </div>
-</quill-editor>
- 
-  
-   
-  
-      </div>
-  
-  
-      <div class="col-md-4">
-        <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">题目</label>
- 
-              <input type="text" class="form-control" name="exampleInputEmail1" [(ngModel)]="article.AritcleName" placeholder="题目">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">简介</label>
-              <input type="text" class="form-control" id="exampleInputPassword1"   placeholder="简介">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">分类</label>
-                <select name="type" class="form-control" [(ngModel)]="article.Type">
-                    <option value="">全部</option>
-                    <option value="1">技术</option>
-                    <option value="2">生活</option>
-                  </select>
-              </div>
-             
-            <button type="submit" (click)="save()" class="btn btn-default">保存</button>
-          </form>
-      </div>
-    </div>
-  </div>
+</div>

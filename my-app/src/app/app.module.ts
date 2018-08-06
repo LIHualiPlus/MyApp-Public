@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule} from 'ngx-bootstrap';
+import { ModalModule} from 'ngx-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FileUploadModule} from 'ng2-file-upload';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +19,7 @@ import { LifeshowComponent } from './lifeshow/lifeshow/lifeshow.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { QuillModule } from '../../node_modules/ngx-quill';
 import { TechnologyComponent } from './technology/technology/technology.component';
+import { LoginComponent } from './membership/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { TechnologyComponent } from './technology/technology/technology.componen
     DetailComponent,
     LifeshowComponent,
     AddArticleComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    LoginComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
+    ModalModule.forRoot(),
     QuillModule,
     HttpClientModule,
     CommonModule,
@@ -45,6 +49,7 @@ import { TechnologyComponent } from './technology/technology/technology.componen
     ReactiveFormsModule
   ],
   providers: [AppService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoginComponent]
 })
 export class AppModule { }

@@ -1,0 +1,23 @@
+<div class=" row">
+    <div class=" col-md-6 col-md-offset-3">
+             
+            <svg class="icon-user" aria-hidden="true">
+                    <use xlink:href="#icon-xxx"></use>
+                </svg>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">用户名</label>
+
+                <input type="text" class="form-control" name="name" [(ngModel)]="user.Name" placeholder="用户名">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">密码</label>
+                <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="user.Password" placeholder="密码">
+            </div>
+
+            <button type="submit" (click)="save()" class="btn btn-default">保存</button>
+        </form>
+    </div>
+
+</div>
+<style type="text/css">.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}</style>
