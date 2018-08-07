@@ -5,7 +5,7 @@ import { Observable } from '../../node_modules/rxjs';
 
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-TYpe': 'application/x-www-form-urlencoded'})
+  headers: new HttpHeaders({ 'Content-TYpe': 'application/x-www-form-urlencoded' })
 };
 
 
@@ -18,12 +18,18 @@ export class AppService {
 
 
   getArticalList(): Observable<any> {
-     return this.http.get( 'api/Artical/getArticalList');
+    return this.http.get('api/Artical/getArticalList');
   }
-  getArticalListByType(type :any): Observable<any> {
-    return this.http.get( `api/Artical/GetArticalListByType/?type=${type}`);
- }
+  getArticalListByType(type: any): Observable<any> {
+    return this.http.get(`api/Artical/GetArticalListByType/?type=${type}`);
+  }
   addArtical(article: any): Observable<any> {
-    return this.http.post( 'api/Artical/addArtical', article);
- }
+    return this.http.post('api/Artical/addArtical', article);
+  }
+  login(user: any): Observable<any> {
+    return this.http.post('api/Member/Login', user);
+  }
+  regist(user: any): Observable<any> {
+    return this.http.post('api/Member/Regist', user);
+  }
 }

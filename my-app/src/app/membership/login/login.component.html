@@ -1,23 +1,65 @@
 <div class=" row">
-    <div class=" col-md-6 col-md-offset-3">
-             
-            <svg class="icon-user" aria-hidden="true">
-                    <use xlink:href="#icon-xxx"></use>
-                </svg>
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">用户名</label>
 
-                <input type="text" class="form-control" name="name" [(ngModel)]="user.Name" placeholder="用户名">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">密码</label>
-                <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="user.Password" placeholder="密码">
-            </div>
-
-            <button type="submit" (click)="save()" class="btn btn-default">保存</button>
-        </form>
+    <div class=" col-md-12">
+        <div style="margin-right: 20px;">
+            <button type="button" class="close .btn-lg" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation"  [ngClass]="{'active': type==1}">
+                    <a (click)="type=1">登录</a>
+                </li>
+                <li role="presentation" [ngClass]="{'active': type==2}">
+                    <a  (click)="type=2"   >注册</a>
+                </li>
 
+            </ul>
+        </div>
+
+        <div class=" col-md-6 col-md-offset-1 ">
+            <div   style="text-align: center">
+                <svg class="icon" aria-hidden="true" style="font-size: 160px; color: rgb(168, 163, 163);">
+                    <use xlink:href="#icon-user"></use>
+                </svg>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">用户名</label>
+
+                    <input type="text" class="form-control" name="name" [(ngModel)]="user.Name" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密码</label>
+                    <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="user.Password" placeholder="密码">
+                </div>
+                <div class="form-group"  *ngIf="type==2" >
+                        <label for="exampleInputPassword1">确认密码</label>
+                        <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="repeatPassword" placeholder="密码">
+                    </div>
+                <div class="form-group" *ngIf="type==1" >
+                    <button type="button" (click)="login()" class="btn btn-block btn-success">登录</button>
+                </div>
+                <div class="form-group"  *ngIf="type==2">
+                        <button type="button" (click)="regist()" class="btn btn-block btn-success">注册</button>
+                 </div>
+            </form>
+            <div style="text-align: right;">
+                <button type="button" class="btn btn-link"> </button>
+            </div>
+        </div>
+
+    </div>
 </div>
-<style type="text/css">.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}</style>
+<style type="text/css">
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+</style>

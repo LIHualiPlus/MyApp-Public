@@ -10,7 +10,7 @@ import { AppService } from '../../app.service';
 export class LifeshowComponent implements OnInit  {
  data: any;
  ArticleList: any;
-  constructor( private activatedRoute: ActivatedRoute,private appservice: AppService) { }
+  constructor( private activatedRoute: ActivatedRoute, private appservice: AppService) { }
 
   ngOnInit() {
     this.data = this.activatedRoute.snapshot.queryParams;
@@ -18,7 +18,7 @@ export class LifeshowComponent implements OnInit  {
     console.log(this.activatedRoute);
     this.getArticalList(1);
   }
-   
+
   getArticalList(a) {
 
     this.appservice.getArticalListByType(a)
