@@ -11,12 +11,12 @@ import { LoginComponent } from './membership/login/login.component';
 export class AppComponent {
   title = 'app';
 
-  constructor( private modalservice :BsModalService){}
+  constructor( private modalservice: BsModalService) {}
   // rout() {
   //   this.router.navigate(['home']);
   // }
-  login(){
+  login() {
 
-    const aa=this.modalservice.show(LoginComponent);
+    const aa = this.modalservice.show(LoginComponent);
   }
 }

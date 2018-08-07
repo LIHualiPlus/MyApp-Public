@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
     this.appService.login(this.user).subscribe(
       response => {
         console.log(response);
-
+        const json = JSON.stringify(response.Data);
+        localStorage.setItem('userinfo', json);
       }
     );
   }
