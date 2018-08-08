@@ -6,5 +6,6 @@ export class Article {
     Text: any = '';
     Type: any = '';
     ChildType: any = '';
+    SimpleText: any = '';
 
 }

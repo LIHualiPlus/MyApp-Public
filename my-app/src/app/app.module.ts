@@ -21,6 +21,8 @@ import { QuillModule } from '../../node_modules/ngx-quill';
 import { TechnologyComponent } from './technology/technology/technology.component';
 import { LoginComponent } from './membership/login/login.component';
 
+import { BootstrapModalModule } from 'ngx-bootstrap-modal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { LoginComponent } from './membership/login/login.component';
     CommonModule,
     FileUploadModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BootstrapModalModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

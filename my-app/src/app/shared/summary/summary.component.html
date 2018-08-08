@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-md-12">
+
     <div class="summary" style="height: 150px;">
 
 
@@ -9,10 +10,12 @@
             class="img-responsive img-rounded" alt=" Responsive image" style="margin-top: 30px;">
         </div>
         <div class="col-md-9 ">
+            <span *ngIf="data.Type==2"  class="badge" style="float: right;margin-top: 20px; background-color: rgb(14, 85, 133); font-size: 16px;">技术</span>
+            <span *ngIf="data.Type==1" class="badge" style="float: right;margin-top: 20px; background-color: rgb(67, 107, 6); font-size: 16px;">生活</span>
           <h3>
             <a [routerLink]="['/lifes']" [queryParams]="data" target="_parent" title="题目">{{data.AritcleName}}
               <br>
-              <small>简介</small>
+              <small>{{data.SimpleText}}</small>
             </a>
           </h3>
           <br>   <br>
