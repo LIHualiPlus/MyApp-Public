@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TechnologyComponent implements OnInit {
   ArticleList: any;
   data: any;
-  constructor( private activatedRoute: ActivatedRoute,private appservice: AppService) { }
+  constructor( private activatedRoute: ActivatedRoute, private appservice: AppService) { }
 
   ngOnInit( ) {
     this.data = this.activatedRoute.snapshot.queryParams;

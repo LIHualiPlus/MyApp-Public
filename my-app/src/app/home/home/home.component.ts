@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Article } from '../../shared/classes/class';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,8 @@ import { AppService } from '../../app.service';
 })
 export class HomeComponent implements OnInit {
 
-  ArticleList: any;
-  constructor(private appservice: AppService) { }
+  ArticleList: Array<Article>;
+  constructor(public appservice: AppService  ) { }
 
   ngOnInit() {
     this.getArticalList();

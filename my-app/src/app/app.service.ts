@@ -19,6 +19,9 @@ export class AppService implements OnInit {
   getArticalListByType(type: any): Observable<any> {
     return this.http.get(`api/Artical/GetArticalListByType/?type=${type}`, this.options());
   }
+  GetArticalById(Id: any): Observable<any> {
+    return this.http.get(`api/Artical/GetArticalById/?Id=${Id}`, this.options());
+  }
   addArtical(article: any): Observable<any> {
     return this.http.post('api/Artical/addArtical', article , this.options());
   }

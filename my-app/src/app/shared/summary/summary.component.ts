@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Article } from '../classes/class';
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -7,7 +8,7 @@ import { AppService } from '../../app.service';
 })
 export class SummaryComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data: Article;
   constructor(private appservice: AppService) {
 
    }
