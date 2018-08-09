@@ -1,4 +1,4 @@
-<div class=" row">
+<div class=" row " style="margin: 0px;">
 
     <div class=" col-md-12">
         <div style="margin-right: 20px;">
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
-                <li role="presentation"  [ngClass]="{'active': type==1}">
+                <li role="presentation"   [ngClass]="{'active': type==1}">
                     <a (click)="type=1">登录</a>
                 </li>
                 <li role="presentation" [ngClass]="{'active': type==2}">
@@ -28,17 +28,17 @@
             </div>
             <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">用户名{{type}}</label>
+                    <label for="exampleInputEmail1">用户名</label>
 
-                    <input type="text" class="form-control" name="name" [(ngModel)]="user.LoginName" placeholder="用户名">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="user.LoginName" placeholder="用户名" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">密码</label>
-                    <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="user.Password" placeholder="密码">
+                    <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="user.Password" placeholder="密码" required>
                 </div>
                 <div class="form-group"  *ngIf="type==2" >
                         <label for="exampleInputPassword1">确认密码</label>
-                        <input type="text" class="form-control" name="Password" id="exampleInputPassword1" [(ngModel)]="repeatPassword" placeholder="密码">
+                        <input type="text" class="form-control" name="Password2" id="exampleInputPassword1" [(ngModel)]="repeatPassword" placeholder="密码" required>
                     </div>
                 <div class="form-group" *ngIf="type==1" >
                     <button type="button" (click)="login()" class="btn btn-block btn-success">登录</button>

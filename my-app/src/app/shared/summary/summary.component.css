@@ -3,6 +3,14 @@
     margin: -10px -15px 0px -15px;
 
 }
+.icon2{
+
+    font-size: 17px; color: rgb(168, 163, 163);
+
+}
+.icon2 :hover{
+    font-size: 20px; color: rgb(226, 7, 7);
+}
 .summary{
 
     display: block;

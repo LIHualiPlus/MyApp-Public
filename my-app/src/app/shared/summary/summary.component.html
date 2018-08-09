@@ -32,15 +32,15 @@
             <svg class="icon" aria-hidden="true" style="font-size: 17px; color: rgb(168, 163, 163);">
               <use xlink:href="#icon-eye"></use>
             </svg>
-            <span>浏览</span>
+            <span>浏览({{data.LookNum}})</span>
             <svg class="icon" aria-hidden="true" style="font-size: 17px; color: rgb(168, 163, 163);">
               <use xlink:href="#icon-message"></use>
             </svg>
-            <span>评论</span>
-            <svg class="icon" aria-hidden="true" style="font-size: 17px; color: rgb(168, 163, 163);">
-              <use xlink:href="#icon-like"></use>
+            <span>评论({{data.CommentNum}})</span>
+            <svg class="icon icon2" aria-hidden="true" id="{{data.Id}}" (click)="AddLike()">
+              <use xlink:href="#icon-like-fill"></use>
             </svg>
-            <span>喜欢</span>
+            <span>喜欢({{data.LikeNum}})</span>
           </div>
         </div>
 

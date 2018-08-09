@@ -25,6 +25,9 @@ export class AppService implements OnInit {
   addArtical(article: any): Observable<any> {
     return this.http.post('api/Artical/addArtical', article , this.options());
   }
+  AddLike(ArticleId: any): Observable<any> {
+    return this.http.get(`api/Artical/AddLike/?ArticleId=${ArticleId}`, this.options());
+  }
   login(user: any): Observable<any> {
     return this.http.post('api/Member/Login', user , this.options());
   }
