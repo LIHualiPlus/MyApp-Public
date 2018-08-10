@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '../../node_modules/@angular/router';
-import { BsModalService } from 'ngx-bootstrap';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { LoginComponent } from './membership/login/login.component';
 
 @Component({
@@ -10,13 +10,17 @@ import { LoginComponent } from './membership/login/login.component';
 })
 export class AppComponent {
   title = 'app';
-
-  constructor( private modalservice: BsModalService) {}
+  modalRef: BsModalRef;
+  constructor(private modalservice: BsModalService) { }
   // rout() {
   //   this.router.navigate(['home']);
   // }
   login() {
 
-    const aa = this.modalservice.show(LoginComponent);
+    this.modalRef = this.modalservice.show(LoginComponent);
+    const onHidden = this.modalservice.onHidden.subscribe(() => {
+      onHidden.unsubscribe();
+    });
+
   }
 }

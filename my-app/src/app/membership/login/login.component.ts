@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
-import { DialogService, BuiltInOptions } from '../../../../node_modules/ngx-bootstrap-modal';
+import { DialogService, BuiltInOptions, DialogOptions } from '../../../../node_modules/ngx-bootstrap-modal';
+import { ModalComponent } from '../../shared/modal/modal.component';
+import { BsModalService, BsModalRef } from '../../../../node_modules/ngx-bootstrap';
 
 
 @Component({
@@ -12,7 +14,8 @@ export class LoginComponent implements OnInit {
   user: any = {};
   type = 1;
   repeatPassword: any;
-  constructor(private appService: AppService, private dialogService: DialogService) { }
+  modalRef: BsModalRef;
+  constructor(private appService: AppService, private dialogService: DialogService, private modalservice: BsModalService) { }
 
   ngOnInit() {
   }
@@ -20,16 +23,34 @@ export class LoginComponent implements OnInit {
     this.appService.login(this.user).subscribe(
       response => {
         console.log(response);
-        const json = JSON.stringify(response.Data);
-        localStorage.setItem('userinfo', json);
+        if (response.Success) {
+          const json = JSON.stringify(response.Data);
+          localStorage.setItem('userinfo', json);
+
+          const initialState = {
+            type: 'success',
+            message: '登录成功',
+          };
+          this.modalRef = this.modalservice.show(ModalComponent, { class: 'modal-sm', initialState });
+          this.modalRef.hide();
+        } else {
+          const initialState = {
+            type: 'danger',
+            message: response.AllMessages,
+          };
+          this.modalRef = this.modalservice.show(ModalComponent, { class: 'modal-sm', initialState });
+
+
+        }
 
       }
     );
+
   }
 
   regist() {
     if (this.repeatPassword !== this.user.Password) {
-      this.dialogService.show(<BuiltInOptions>{
+      this.dialogService.alert('aaa', 'aaa', <BuiltInOptions>{
         content: '两次密码不一致',
         icon: 'error',
         size: 'sm',

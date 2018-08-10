@@ -22,6 +22,7 @@ import { TechnologyComponent } from './technology/technology/technology.componen
 import { LoginComponent } from './membership/login/login.component';
 
 import { BootstrapModalModule } from 'ngx-bootstrap-modal';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BootstrapModalModule } from 'ngx-bootstrap-modal';
     LifeshowComponent,
     AddArticleComponent,
     TechnologyComponent,
-    LoginComponent
+    LoginComponent,
+    ModalComponent
 
   ],
   imports: [
@@ -49,10 +51,10 @@ import { BootstrapModalModule } from 'ngx-bootstrap-modal';
     FileUploadModule,
     FormsModule,
     ReactiveFormsModule,
-    BootstrapModalModule
+    BootstrapModalModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent],
-  entryComponents: [LoginComponent]
+  entryComponents: [LoginComponent, ModalComponent]
 })
 export class AppModule { }
