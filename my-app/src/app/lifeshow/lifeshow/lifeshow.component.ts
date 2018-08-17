@@ -14,8 +14,8 @@ export class LifeshowComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private appservice: AppService) { }
 
   ngOnInit() {
-    this.data = this.activatedRoute.snapshot.queryParams;
-    console.log(this.data);
+    this.data.Id = this.activatedRoute.snapshot.queryParams.Id;
+    console.log(this.activatedRoute.snapshot.queryParams);
     console.log(this.activatedRoute);
     if (this.data.Id === undefined) {
       this.getArticalList(1);

@@ -13,7 +13,7 @@
             <span *ngIf="data.Type==2"  class="badge" style="float: right;margin-top: 20px; background-color: rgb(14, 85, 133); font-size: 16px;">技术</span>
             <span *ngIf="data.Type==1" class="badge" style="float: right;margin-top: 20px; background-color: rgb(67, 107, 6); font-size: 16px;">生活</span>
           <h3>
-            <a [routerLink]="['/lifes']" [queryParams]="data" target="_parent" title="题目">{{data.AritcleName}}
+            <a [routerLink]="['/lifes']" [queryParams]="{'Id':data.Id}" target="_parent" title="题目">{{data.AritcleName}}
               <br>
               <small>{{data.SimpleText}}</small>
             </a>

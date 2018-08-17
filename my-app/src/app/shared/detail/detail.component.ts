@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../../app.service';
+import { Article } from '../classes/class';
 
 @Component({
   selector: 'app-detail',
@@ -8,7 +9,8 @@ import { AppService } from '../../app.service';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() Id: any;
+  data: Article;
   Text: any;
   constructor(private appservice: AppService) { }
 
@@ -18,10 +20,10 @@ export class DetailComponent implements OnInit {
 
   GetArticalById() {
 
-    this.appservice.GetArticalById(this.data.Id)
+    this.appservice.GetArticalById(this.Id)
       .subscribe(response => {
-        console.log(this.data);
         this.Text = response.Data.Text;
+        this.data = response.Data;
       });
   }
 }

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule} from 'ngx-bootstrap';
 import { ModalModule} from 'ngx-bootstrap';
-import { CommonModule } from '@angular/common';
+import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FileUploadModule} from 'ng2-file-upload';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -53,7 +53,9 @@ import { ModalComponent } from './shared/modal/modal.component';
     ReactiveFormsModule,
     BootstrapModalModule,
   ],
-  providers: [AppService],
+  providers: [AppService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent, ModalComponent]
 })
